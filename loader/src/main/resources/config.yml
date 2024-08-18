@@ -1,0 +1,23 @@
+apikey: "输入你的apiKey"
+
+behead:
+  origin_chance: 0.1
+  add_chance_per_level: 0.1
+chain_collection:
+  origin_collection_number: 1
+  add_number_per_level: 1
+  custom:
+    # 物品类型名
+    GOLD_PICKAXE:
+      use_builtin: true
+      extra_collection:
+        - "OBSIDIAN"
+smelt:
+  origin_chance: 0.6
+  add_chance_per_level: 0.1
+farm:
+  origin_farm_number: 1
+  add_number_per_level: 1
+farmer:
+  origin_chance: 0.6
+  add_chance_per_level: 0.1

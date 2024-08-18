@@ -1,0 +1,10 @@
+rootProject.name = "CustomEnchantLoader"
+include("loader")
+include("behead")
+include("chain-collection")
+include("moisturize")
+include("smelt")
+include("farm")
+include("farmer")
+include("damage-protection")
+include("elytra")
