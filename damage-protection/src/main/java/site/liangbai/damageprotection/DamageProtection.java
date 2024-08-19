@@ -25,6 +25,9 @@ public class DamageProtection implements CustomEnchantProcessor, Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onDamage(PlayerInteractEvent event) {
+        if (event.isCancelled()) {
+            return;
+        }
         if (event.getHand() != EquipmentSlot.HAND) {
             return;
         }

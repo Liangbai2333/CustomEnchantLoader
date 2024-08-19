@@ -21,3 +21,13 @@ farm:
 farmer:
   origin_chance: 0.6
   add_chance_per_level: 0.1
+gold_digger:
+  origin_chance: 0.1
+  add_chance_per_level: 0.1
+  origin_heal: 1
+  add_heal_per_level: 0
+  origin_add_food_level: 1
+  add_food_level_per_level: 0
+eternal:
+  origin_chance: 0.6
+  add_chance_per_level: 0.1
