@@ -38,7 +38,7 @@ public class DamageProtection implements CustomEnchantProcessor, Listener {
         if (!ItemUtil.hasCustomEnchant(itemStack, CustomEnchantType.DAMAGE_PROTECTION)) {
             return;
         }
-        int durability = itemStack.getDurability();
+        int durability = getDurability(itemStack);
         if (durability == 1) {
             Player player = event.getPlayer();
             PlayerInventory inventory = player.getInventory();
@@ -51,7 +51,7 @@ public class DamageProtection implements CustomEnchantProcessor, Listener {
             } else {
                 int index = -1;
                 for (int i = 0; i < inventory.getSize(); i++) {
-                    if (inventory.getItem(i).isSimilar(itemStack) && inventory.getItem(i).getDurability() > 1) {
+                    if (inventory.getItem(i).isSimilar(itemStack) && getDurability(inventory.getItem(i)) > 1 ) {
                         index = i;
                         break;
                     }
@@ -73,5 +73,9 @@ public class DamageProtection implements CustomEnchantProcessor, Listener {
             }
             event.setCancelled(true);
         }
+    }
+
+    public static int getDurability(ItemStack itemStack) {
+        return itemStack.getType().getMaxDurability() - itemStack.getDurability();
     }
 }

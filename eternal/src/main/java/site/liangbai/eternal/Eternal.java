@@ -51,8 +51,7 @@ public class Eternal implements CustomEnchantProcessor, Listener {
         if (!hasChance(chance)) {
             return;
         }
-        short durability = itemStack.getDurability();
-        itemStack.setDurability((short) (durability + 1));
+        itemStack.setDurability((short) (Math.min(0, itemStack.getDurability() - 1)));
         event.getPlayer().getInventory().setItemInMainHand(itemStack);
     }
 
